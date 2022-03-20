@@ -3,7 +3,7 @@
     let firstAccess = true;
 
     let $post = async () => {
-        return $.post("https://dev.digitalfikirler.com/brandeyes/controller.php", { productId: pageParams.product.id, action: 1 });
+        return $.post("***/controller.php", { productId: pageParams.product.id, action: 1 });
     }
     
     let optionSlider = () => {
@@ -40,7 +40,7 @@
                         find = element;
                     }
                 });
-                if (find !== false) images.push(`<img src="https://www.brandeyes.com.tr/myassets/products/${ find.image }" alt="${ find.name }"></img>`);
+                if (find !== false) images.push(`<img src="***/myassets/products/${ find.image }" alt="${ find.name }"></img>`);
                 if ($(iterator).hasClass("variant-selected") !== false) selectedVariant = $(iterator).attr("data-option-title").trim();
             }
             for (let index = 0; index < images.length; index++) {
