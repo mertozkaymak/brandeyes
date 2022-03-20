@@ -21,12 +21,12 @@
         }
         
         function connectToService() {
-            $cURL = curl_init("http://212.252.106.126:44444/api/login");
+            $cURL = curl_init("***/api/login");
             curl_setopt($cURL, CURLOPT_POST, 1);
             curl_setopt($cURL, CURLOPT_POSTFIELDS, createPostvars(array(
                 'grant_type'    => 'password',
-                'username'      => 'dijitalfikirler',
-                'password'      => rawurlencode('F/dvxZf1*Vz4J+xneUABNWWoQjjFl/sr5o2x5YD8ud1N7wjiZzcL+kW0HNYYz+4l9aC/6CFiHzCFAuQrfB4N/ik22bo9qGg=='),
+                'username'      => '***',
+                'password'      => rawurlencode('***'),
             )));
             curl_setopt($cURL, CURLOPT_HEADER, 0);
             curl_setopt($cURL, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
@@ -39,7 +39,7 @@
         function getServiceInformation() {
             $access_token = connectToService();
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "http://212.252.106.126:44444/api/v1/Products/List");
+            curl_setopt($ch, CURLOPT_URL, "***/api/v1/Products/List");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 'Accept: application/json',
                 'Content-Type: application/json',
